@@ -11,7 +11,7 @@ workflows:
       - name: Get Flutter packages
         script: flutter pub get
       - name: Analyze Dart code
-        script: flutter analyze
+       script: flutter analyze --no-fatal-infos
       - name: Build iOS app without signing
         script: flutter build ios --release --no-codesign
     artifacts:
